@@ -3,7 +3,7 @@
 }
 
 #main {
-  background-image: url("./src/assets/image 10.png");
+  background-image: url("/src/assets/image 10.png");
   background-size: cover;
   height: 100vh;
   color: white;
