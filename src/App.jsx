@@ -1,15 +1,22 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Nav from "./Components/Nav";
+import Top from "./Components/Top";
+import { createTheme, ThemeProvider } from "@mui/material";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "Outfit, sans-serif",
+  },
+});
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <Nav />
+      <ThemeProvider theme={theme}>
+        <Nav />
+        <Top />
+      </ThemeProvider>
     </>
   );
 }
