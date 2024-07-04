@@ -4,6 +4,15 @@ import player from "../assets/Frame 6.png";
 import { motion } from "framer-motion";
 import Logos from "./Logos";
 
+const svgVariants = {
+  hover: {
+    x: 10,
+  },
+  rest: {
+    x: 0,
+  },
+};
+
 function Top() {
   return (
     <>
@@ -23,13 +32,18 @@ function Top() {
           </Stack>
           <Typography
             variant="h1"
-            sx={{ fontWeight: "800px", fontSize: { lg: "280px" } }}
+            sx={{
+              fontWeight: "800px",
+              fontSize: { lg: "280px" },
+              cursor: "pointer",
+            }}
           >
-            {" "}
             REVVED
           </Typography>
         </Stack>
         <Stack
+          component={motion.div}
+          whileHover="hover"
           spacing={2}
           id="racer"
           direction="row"
@@ -52,7 +66,9 @@ function Top() {
             viewBox="0 0 43 43"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            whileHover={{ x: 10 }}
+            variants={{
+              hover: { x: 10 },
+            }}
           >
             <rect
               x="1.25977"

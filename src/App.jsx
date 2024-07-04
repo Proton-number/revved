@@ -3,6 +3,7 @@ import "./App.css";
 import Nav from "./Components/Nav";
 import Top from "./Components/Top";
 import { createTheme, ThemeProvider } from "@mui/material";
+import Raptor from "./Components/Raptor";
 
 const theme = createTheme({
   typography: {
@@ -16,6 +17,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Nav />
         <Top />
+        <Raptor/>
       </ThemeProvider>
     </>
   );

@@ -67,9 +67,17 @@ function Nav() {
         </Stack>
 
         <Button
+          component={motion.button}
+          whileHover="hover"
           variant="contained"
           disableElevation
-          endIcon={<MotionEndIcon whileHover={{ x: 10 }} />}
+          endIcon={
+            <MotionEndIcon
+              variants={{
+                hover: { x: 10 },
+              }}
+            />
+          }
           sx={{
             backgroundColor: "#D04B00",
             borderRadius: 0,
