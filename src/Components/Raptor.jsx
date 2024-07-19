@@ -15,21 +15,26 @@ const images = [
   },
 ];
 
-
 function Raptor() {
   return (
-    <Stack sx={{ padding: "100px" }} spacing={10}>
+    <Stack
+      sx={{ padding: { xs: "80px", lg: "100px", backgroundColor: "black" } }}
+      spacing={10}
+    >
       <Stack>
         <Typography
           sx={{ fontSize: "14px", color: "#FF5C00", textAlign: "left" }}
         >
           WHAT'S NEW
         </Typography>
-        <Stack>
-          <Typography sx={{ fontSize: "75px" }}>Raptor Hurricane v7</Typography>
-          <Typography sx={{ fontSize: "75px" }}>-Dragon</Typography>
-        </Stack>
-        <Typography sx={{ fontWeight: "300px", width: "50%" }} variant="body2">
+        <Typography sx={{ fontSize: "75px", width: { lg: "50%" } }}>
+          Raptor Hurricane v7 -Dragon
+        </Typography>
+
+        <Typography
+          sx={{ fontWeight: "300px", width: { lg: "50%" } }}
+          variant="h6"
+        >
           At Revved, we live and breathe racing. Founded by dedicated automative
           enthusiasts and engineers, we transform high-performance cars into
           track-ready champions.
@@ -42,7 +47,10 @@ function Raptor() {
             <Box
               component="img"
               src={image.img}
-              sx={{ width: { lg: "900px" }, height: { lg: "600px" } }}
+              sx={{
+                width: { xs: "400px", lg: "980px" },
+                height: { xs: "320px", lg: "640px" },
+              }}
             />
           </React.Fragment>
         ))}
